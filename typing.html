@@ -2,39 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>FAST FINGERS</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Typing Competition</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>Typing Competition - BCA</h1>
-    <p class="instructions">
-      Type the given text below within 8 minutes. You cannot use backspace or paste text. 
-    </p>
-
-    <div class="text-container">
-      <p id="sample-text">
-        Artificial Intelligence (AI) has become an integral part of our daily lives, transforming how we work, communicate, and interact with the world around us. AI systems are embedded in various devices and applications, making tasks more efficient and accessible. For example, voice assistants like Siri, Alexa, and Google Assistant help with everyday tasks such as setting reminders, checking weather, or playing music. AI-powered recommendations on platforms like Netflix and YouTube suggest content based on user preferences, enhancing entertainment choices.
-
-        In the workplace, AI tools streamline processes by automating repetitive tasks, boosting productivity, and assisting in decision-making. AI is also revolutionizing healthcare with diagnostic tools that analyze medical data and help doctors provide better care. In transportation, AI is at the heart of autonomous vehicles, promising to reduce accidents and improve efficiency on the roads.
-
-        However, AI also raises concerns about privacy, job displacement, and ethics. As AI continues to evolve, it is essential to find a balance that maximizes its benefits while addressing these challenges. In conclusion, AI is shaping the future by improving convenience, efficiency, and innovation in everyday life, but its impact must be carefully managed to ensure a positive outcome for society.
-      </p>
+    <div class="top-bar">
+      <div id="timer">Time left: 8:00</div>
+      <div id="wpm-result">WPM: 0</div>
     </div>
-
-    <button id="start-btn">Start</button>
-
+    <h1>Typing Competition - BCA </h1>
+    <p class="instructions">
+      Type the paragraph accurately within 8 minutes. Your Words Per Minute (WPM) will be calculated at the end. Highlighted characters show mismatches.
+    </p>
+    <div class="text-container" id="preview-container">
+      <p id="sample-text"></p>
+    </div>
     <textarea id="typing-area" placeholder="Start typing here..." disabled></textarea>
-    
-
-    <p id="timer">Time left: 8:00</p>
-    <button id="submit-btn" disabled>Submit</button>
-
-    <p id="result"></p>
+    <div class="actions">
+      <button id="start-button">Start</button>
+    </div>
+    <div id="result"></div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
